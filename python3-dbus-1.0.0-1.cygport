@@ -1,0 +1,18 @@
+ORIG_PN=dbus-python
+inherit python3
+
+DESCRIPTION="Python D-Bus bindings"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/DBusBindings"
+SRC_URI="http://dbus.freedesktop.org/releases/${ORIG_PN}/${ORIG_PN}-${PV}.tar.gz"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	cygconf --disable-static PYTHON=${PYTHON3}
+	cygmake LIBS="-no-undefined ${LIBPYTHON3}"
+}
+
+CYGCONF_ARGS="--disable-api-docs --disable-html-docs"
+
+KEEP_LA_FILES="none"
