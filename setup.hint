@@ -1,4 +1,0 @@
-category: Python
-requires: libdbus1_3 libdbus-glib_1_2 libglib2.0_0 python3
-sdesc: "Py3K D-Bus bindings"
-ldesc: "Py3K D-Bus bindings"
