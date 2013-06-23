@@ -1,10 +1,15 @@
-ORIG_PN=dbus-python
 inherit python3
 
+NAME="python3-dbus"
+VERSION=1.2.0
+RELEASE=1
 CATEGORY="Python"
-DESCRIPTION="Python D-Bus bindings"
+SUMMARY="Py3K D-Bus bindings"
+DESCRIPTION="dbus-python is a binding for libdbus-1, the reference
+implementation of D-Bus."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/DBusBindings"
-SRC_URI="http://dbus.freedesktop.org/releases/${ORIG_PN}/${ORIG_PN}-${PV}.tar.gz"
+SRC_URI="http://dbus.freedesktop.org/releases/dbus-python/dbus-python-${VERSION}.tar.gz"
+SRC_DIR="dbus-python-${VERSION}"
 
 src_compile() {
 	cd ${S}
